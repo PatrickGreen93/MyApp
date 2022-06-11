@@ -19,6 +19,7 @@ library(waiter)
 library(PMCMRplus)
 
 
+shinyOptions(cache = cachem::cache_disk("./app_cache/cache/"))
 
 files <- list.files("./Data", pattern = "\\.rds$")
 object_names <- tools::file_path_sans_ext(basename( files))
@@ -30,5 +31,5 @@ lapply(files,
   list2env(envir=globalenv())
 setwd("..")
 
-shinyOptions(cache = cachem::cache_disk("./app_cache/cache/"))
+
 

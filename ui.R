@@ -1,7 +1,7 @@
 ui <- dashboardPage(
   options = list(sidebarExpandOnHover = TRUE),
   header = dashboardHeader(title = "Fake School Data", fixed = TRUE,
-                           tags$head(tags$style(HTML(".brand-link {text-align:center !important;}"))),
+                           tags$head(tags$style(HTML(".brand-link {text-align:center !important;}")))
                            # rightUi = (tags$li(a(onclick = "onclick =window.open('https://github.com')",
                            #           href = NULL,
                            #           icon("github"),
@@ -30,11 +30,12 @@ ui <- dashboardPage(
     # waiter::autoWaiter(c("myMap", "kw_plot"), color = transparent(.3), html = spin_throbber()),
     useWaiter(),
     tags$style("@import url(https://use.fontawesome.com/releases/v6.1.1/css/all.css);"),
-    tags$style("body {
-    -moz-transform: scale(0.8, 0.8); /* Moz-browsers */
-    zoom: 0.8; /* Other non-webkit browsers */
-    zoom: 80%; /* Webkit browsers */
-          }"),
+    # Add the code below if you want to view the dashboard in browser.
+      # tags$style("body {
+      # -moz-transform: scale(0.8, 0.8); /* Moz-browsers */
+      # zoom: 0.8; /* Other non-webkit browsers */
+      # zoom: 80%; /* Webkit browsers */
+      #       }"),
     tags$head(tags$style(HTML(
       "#.+ div>.waiter-overlay-content{
       position: absolute;
